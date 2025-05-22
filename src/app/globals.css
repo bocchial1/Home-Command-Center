@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 29% 20%; /* Dark Gray base #283747 */
+    --foreground: 204 25% 94%; /* Light Gray #ECF0F1 */
+
+    --card: 210 29% 25%; /* Dark Gray for cards #34495E */
+    --card-foreground: 204 25% 94%; /* Light Gray #ECF0F1 */
+
+    --popover: 210 29% 15%; /* Darker Gray for popovers */
+    --popover-foreground: 204 25% 94%; /* Light Gray #ECF0F1 */
+
+    --primary: 210 39% 45%; /* Midnight Blue #2C3E50, slightly lighter for better visibility as primary action */
+    --primary-foreground: 204 25% 94%; /* Light Gray #ECF0F1 on primary */
+    
+    --secondary: 210 25% 30%; /* Supporting dark shade */
+    --secondary-foreground: 204 25% 94%; /* Light Gray #ECF0F1 */
+
+    --muted: 210 20% 50%; /* Muted shade */
+    --muted-foreground: 210 15% 70%; /* Lighter muted text */
+
+    --accent: 168 76% 42%; /* Teal #1ABC9C */
+    --accent-foreground: 210 29% 10%; /* Dark text on Teal */
+
+    --destructive: 0 62.8% 30.6%; /* Default dark destructive */
+    --destructive-foreground: 0 0% 98%; /* Default dark destructive foreground */
+    
+    --border: 210 20% 30%; /* Subtle border */
+    --input: 210 20% 30%; /* Input background same as border */
+    --ring: 168 76% 52%; /* Teal, slightly lighter for ring */
+
+    --radius: 0.5rem;
+
+    /* Sidebar specific colors - retained from original but themed */
+    --sidebar-background: 210 29% 18%; /* Slightly darker than main background */
+    --sidebar-foreground: 204 25% 85%; 
+    --sidebar-primary: 168 76% 42%; /* Teal for primary actions in sidebar */
+    --sidebar-primary-foreground: 210 29% 10%;
+    --sidebar-accent: 210 29% 22%;
+    --sidebar-accent-foreground: 204 25% 90%;
+    --sidebar-border: 210 20% 28%;
+    --sidebar-ring: 168 76% 52%;
+  }
+
+  .dark {
+    /* Same as :root for a default dark theme */
+    --background: 210 29% 20%;
+    --foreground: 204 25% 94%;
+    --card: 210 29% 25%;
+    --card-foreground: 204 25% 94%;
+    --popover: 210 29% 15%;
+    --popover-foreground: 204 25% 94%;
+    --primary: 210 39% 45%;
+    --primary-foreground: 204 25% 94%;
+    --secondary: 210 25% 30%;
+    --secondary-foreground: 204 25% 94%;
+    --muted: 210 20% 50%;
+    --muted-foreground: 210 15% 70%;
+    --accent: 168 76% 42%;
+    --accent-foreground: 210 29% 10%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 210 20% 30%;
+    --input: 210 20% 30%;
+    --ring: 168 76% 52%;
+
+    --sidebar-background: 210 29% 18%;
+    --sidebar-foreground: 204 25% 85%; 
+    --sidebar-primary: 168 76% 42%; 
+    --sidebar-primary-foreground: 210 29% 10%;
+    --sidebar-accent: 210 29% 22%;
+    --sidebar-accent-foreground: 204 25% 90%;
+    --sidebar-border: 210 20% 28%;
+    --sidebar-ring: 168 76% 52%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    /* Removed: font-family: var(--font-geist-sans), sans-serif; */
+    /* Rely on Tailwind's default sans-serif stack */
+  }
+}
